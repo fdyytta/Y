@@ -1,0 +1,10 @@
+2025-02-25 11:59:29,767:INFO:discord.client: logging in using static token
+2025-02-25 11:59:31,318:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 53ecd55ffca67d546f4baddf9af130d2).
+2025-02-25 12:00:37,375:ERROR:discord: User: kentos5093 (ID: 1035189920488235120), Command: addBal, Error: User "Fdygg" not found., Channel: Direct Message with Unknown User
+2025-02-25 12:01:05,495:ERROR:discord.ui.view: Ignoring exception in view <View timeout=180.0 children=3> for item <Button style=<ButtonStyle.secondary: 2> url=None disabled=False label='Check Balance' emoji=None row=None sku_id=None>
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/storage/emulated/0/test/ext/live.py", line 52, in button_balance_callback
+    cursor.execute("SELECT balance FROM users WHERE growid = ?", (growid[0],))
+sqlite3.OperationalError: no such column: growid
